@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vishvarupa Creations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- CLICK SOUND -->
+<audio id="clickSound">
+    <source src="data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA" type="audio/mp3">
+</audio>
+
+<!-- LOADER -->
+<div class="loader">
+    <div class="cinematic-loader">
+        <div class="logo-reveal">
+            <span class="letter" style="--i:1">V</span>
+            <span class="letter" style="--i:2">I</span>
+            <span class="letter" style="--i:3">S</span>
+            <span class="letter" style="--i:4">H</span>
+            <span class="letter" style="--i:5">V</span>
+            <span class="letter" style="--i:6">A</span>
+            <span class="letter" style="--i:7">R</span>
+            <span class="letter" style="--i:8">U</span>
+            <span class="letter" style="--i:9">P</span>
+            <span class="letter" style="--i:10">A</span>
+        </div>
+        <div class="tagline-reveal">CREATIONS</div>
+        <div class="film-strip"></div>
+        <div class="lens-flare"></div>
+    </div>
+</div>
+
+<nav>
+    <h2 onclick="goHome()">Vishvarupa Creations</h2>
+    <div class="menu-toggle" id="menuBtn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a onclick="goHome()">Home</a>
+    <a onclick="showPackages()">Packages</a>
+    <a onclick="showEnquiry()">Vishvarupa Creations</a>
+    <a onclick="showTeam()">Our Team</a>
+    <a onclick="showMyBookings()">My Bookings</a>
+    <a onclick="toggleSupport()">Customer Support ▼</a>
+    <div class="sub-menu" id="supportMenu">
+        <a href="tel:+919392780457">Phone: 93927 80457</a>
+        <a href="https://www.instagram.com/vishvarupa_creations?igsh=MXVjNG5paXB0MXVjYg==" target="_blank">Instagram: @vishvarupa_creations</a>
+        <a href="mailto:vishvarupacreationsdigitstud@gmail.com">Gmail: vishvarupacreationsdigitstud@gmail.com</a>
+    </div>
+</div>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <h1><span>Vishvarupa</span><br>Creations</h1>
+    <p class="sub">Professional filmmaking & cinematic reels</p>
+
+    <div class="phone">
+        <div class="screen">
+            <h3>Hello Buddy 😊</h3>
+            <p style="opacity:.7;font-size:13px">Welcome to Turbo Cut</p>
+            <div class="card">WE SHOOT, EDIT & DELIVER INSTANTLY.</div>
+            <p style="opacity:.6;font-size:12px">Reels • Ads • Weddings</p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="btn primary" onclick="showPackages()">Turbo Cut</button>
+        <button class="btn secondary" onclick="showEnquiry()">Vishvarupa Creations</button>
+    </div>
+
+    <div class="stats">
+        <div class="stat"><h2>100+</h2><p>Projects</p></div>
+        <div class="stat"><h2>4⭐</h2><p>Rating</p></div>
+        <div class="stat"><h2>20+</h2><p>Artists</p></div>
+    </div>
+
+    <div class="credit">
+        Website Design & Developed by 
+        <a href="https://www.instagram.com/supraneeth__sai?igsh=MXdxanNuZGh0NnpxdA%3D%3D&utm_source=qr" target="_blank">Supraneethsai Ganta</a> 
+        and 
+        <a href="https://www.instagram.com/kavali_charan0906?igsh=MWF6NDJzdzc1eW0zYQ==" target="_blank">Kavali Charan</a>
+    </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packagesPage" style="display:none;">
+    <button class="btn secondary" onclick="goHome()">← Back to Home</button>
+    <h2>CHOOSE YOUR PACKAGE</h2>
+    <p style="opacity:0.8;margin-bottom:40px;">Professional photography and videography packages designed for every need and budget</p>
+
+    <div class="package-card">
+        <h3>Turbo</h3>
+        <ul>
+            <li>📹 1 Reel</li>
+            <li>⏰ Up to 1:30-hour shoot</li>
+            <li>✂️ 20 min editing</li>
+            <li>📷 No Raw Data</li>
+        </ul>
+        <div class="price">₹2999/-</div>
+        <button class="btn primary" onclick="showBooking(2999,'Turbo')">Choose Package</button>
+    </div>
+
+    <div class="package-card popular">
+        <h3>Turbo PRO</h3>
+        <ul>
+            <li>📹 2 Reels</li>
+            <li>⏰ Up to 2.5-hours shoot</li>
+            <li>⚡ Fast same-day delivery</li>
+            <li>📷 No Raw Data</li>
+        </ul>
+        <div class="price">₹2499/-</div>
+        <button class="btn primary" onclick="showBooking(2499,'Turbo PRO')">Choose Package</button>
+    </div>
+
+    <div class="package-card popular">
+        <h3>Turbo PRO MAX</h3>
+        <ul>
+            <li>📹 3 Reels</li>
+            <li>⏰ Up to 3.5-hours shoot</li>
+            <li>⚡ Fast same-day delivery</li>
+            <li>📷 No Raw Data</li>
+        </ul>
+        <div class="price">₹3999/-</div>
+        <button class="btn primary" onclick="showBooking(3999,'Turbo PRO MAX')">Choose Package</button>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-page" id="bookingPage" style="display:none;">
+    <button class="btn secondary" onclick="showPackages()">← Back to Packages</button>
+    <h2>Book Your Shoot</h2>
+
+    <div class="booking-form">
+        <label>Full Name *</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Contact Number *</label>
+        <input type="tel" placeholder="+91 Enter phone number" required>
+
+        <label>Email Address *</label>
+        <input type="email" placeholder="your@email.com" required>
+
+        <label>Event Type / Occasion *</label>
+        <select required>
+            <option value="">Select event type</option>
+            <option>Wedding</option>
+            <option>Pre-wedding</option>
+            <option>Birthday</option>
+            <option>Engagement</option>
+            <option>Corporate / Product</option>
+            <option>Other</option>
+        </select>
+
+        <label>City *</label>
+        <input type="text" placeholder="e.g. Anantapur" required>
+
+        <label>Event Date *</label>
+        <input type="date" required>
+
+        <label>Event Time (approx) *</label>
+        <input type="time" required>
+
+        <label>Special Requirements / Song Suggestions (optional)</label>
+        <textarea placeholder="Any special requests, song preferences..." rows="4"></textarea>
+    </div>
+
+    <div class="payment-section">
+        <h3>Payment Summary</h3>
+        <p id="selectedPackageText">Package: <strong>Turbo</strong></p>
+        <p>Package Amount: <strong id="packageAmt">₹2,999</strong></p>
+        <p>Total Amount: <strong id="totalAmt">₹2,999</strong></p>
+        <p>Advance to Pay Now (50%): <strong id="advanceAmt" style="color:#ff3b3b;font-size:24px;">₹1500</strong></p>
+        <p style="font-size:14px;opacity:0.8;">* Remaining amount payable on event day</p>
+
+        <div class="terms">
+            <h3>Terms & Conditions</h3>
+            <ul>
+                <li>50% advance payment required to confirm booking</li>
+                <li>Travel expenses are to be borne by the client</li>
+                <li>Cancellations must be informed 24 hours in advance</li>
+                <li>Last-minute cancellations are non-refundable</li>
+                <li>RAW footage will not be shared under any package</li>
+                <li>Logo placement is mandatory on all delivered reels</li>
+            </ul>
+            <label style="display:block;margin-top:20px;font-size:15px;">
+                <input type="checkbox" id="agreeTerms"> I agree to the terms and conditions
+            </label>
+        </div>
+
+        <button class="pay-btn" id="payButton" disabled>Pay ₹1500 & Confirm Booking</button>
+
+        <p style="margin-top:25px;font-size:14px;opacity:0.7;">
+            Secured by Razorpay • 256-bit SSL Encryption
+        </p>
+    </div>
+</section>
+
+<!-- ENQUIRY / Vishvarupa Creations -->
+<section class="enquiry-page" id="enquiryPage" style="display:none;">
+    <button class="btn secondary" onclick="goHome()">← Back to Home</button>
+    <h2>Vishvarupa Creations</h2>
+
+    <div class="enquiry-form">
+        <form id="enquiryForm">
+            <label>Full Name *</label>
+            <input type="text" required placeholder="Enter your full name">
+
+            <label>Contact Number *</label>
+            <div style="display:flex;gap:10px;">
+                <select required>
+                    <option value="+91">🇮🇳 +91</option>
+                </select>
+                <input type="tel" required placeholder="Enter phone number">
+            </div>
+
+            <label>Email Address *</label>
+            <input type="email" required placeholder="your@email.com">
+
+            <label>Event *</label>
+            <select required>
+                <option value="">Select Event</option>
+                <option>Short film</option>
+                <option>Reels</option>
+                <option>Web series</option>
+                <option>Youtube Videos</option>
+                <option>Youtube Shorts</option>
+                <option>Other</option>
+            </select>
+
+            <label>City *</label>
+            <select required>
+                <option value="">Select city</option>
+                <option>Anantapur</option>
+                <option>Vijayawada</option>
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Vizag</option>
+                <option>Pune</option>
+                <option>Other</option>
+            </select>
+
+            <label>Date of the Event *</label>
+            <input type="date" required>
+
+            <button type="submit" class="submit-btn">Submit Enquiry</button>
+        </form>
+    </div>
+</section>
+
+<!-- MY BOOKINGS -->
+<section class="booking-page my-bookings-page" id="myBookingsPage" style="display:none;">
+    <button class="btn secondary" onclick="goHome()">← Back to Home</button>
+    <h2>My Bookings</h2>
+
+    <div style="max-width:580px; margin:40px auto; text-align:left;">
+        <h3 style="color:#ff3b3b; margin-bottom:20px;">Current / Upcoming Bookings</h3>
+        <div style="background:rgba(255,59,59,0.08); border:1px solid #ff3b3b30; border-radius:16px; padding:25px; margin-bottom:35px;">
+            <p style="margin:8px 0; font-size:15px;"><strong>No upcoming bookings found.</strong></p>
+            <p style="opacity:0.7; font-size:14px;">When you complete a booking, it will appear here.</p>
+        </div>
+
+        <h3 style="color:#ff3b3b; margin:50px 0 20px;">Previous Bookings</h3>
+        <div style="background:rgba(0,0,0,0.4); border-radius:16px; padding:25px;">
+            <p style="margin:8px 0; font-size:15px; opacity:0.8;">
+                No previous bookings yet.
+            </p>
+            <p style="font-size:14px; opacity:0.6;">
+                Your booking history will be shown here once you have completed shoots with us.
+            </p>
+        </div>
+    </div>
+
+    <p style="margin-top:80px; opacity:0.6; font-size:14px;">
+        Need help with a booking? → <a onclick="toggleSupport(); goHome()" style="color:#ff3b3b; cursor:pointer;">Contact Support</a>
+    </p>
+</section>
+
+<!-- OUR TEAM -->
+<section class="team-page" id="teamPage" style="display:none; padding:140px 20px 60px; background:linear-gradient(180deg,#0a0000,#2a0000);">
+    <button class="btn secondary" onclick="goHome()">← Back to Home</button>
+    <h2 style="color:#ff3b3b; margin:40px 0 50px; font-size:38px;">Our Team</h2>
+    <p style="opacity:0.85; max-width:700px; margin:0 auto 60px; font-size:18px;">
+        Meet the passionate minds behind Vishvarupa Creations & Turbo Cut -- revolutionizing cinematic content creation
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1200px; margin:0 auto;">
+
+        <div style="width:280px; text-align:center;">
+            <a href="https://www.instagram.com/jt_singh__?igsh=dTc0ZW5zbHQxMTBn" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+                <div style="width:180px; height:180px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:3px solid #ff3b3b; box-shadow:0 0 30px rgba(255,59,89,0.5); transition:0.4s;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Jt Dhoni hari har singh" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h3 style="font-size:24px; margin-bottom:8px;">Jt Dhoni Hari Har Singh</h3>
+                <p style="opacity:0.8; font-size:16px;">Founder and CEO</p>
+            </a>
+        </div>
+
+        <div style="width:280px; text-align:center;">
+            <a href="https://www.instagram.com/supraneeth__sai?igsh=MXdxanNuZGh0NnpxdA%3D%3D&utm_source=qr" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+                <div style="width:180px; height:180px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:3px solid #ff3b3b; box-shadow:0 0 30px rgba(255,59,89,0.5); transition:0.4s;">
+                    <img src="IMG_0290 copy.jpg" alt="Supraneethsai Ganta" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h3 style="font-size:24px; margin-bottom:8px;">Supraneethsai Ganta</h3>
+                <p style="opacity:0.8; font-size:16px;">Co-Founder and MD</p>
+            </a>
+        </div>
+
+        <div style="width:280px; text-align:center;">
+            <a href="https://www.instagram.com/hemanth_datta_18?igsh=MTRmMHVpejA5NmRuZg==" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+                <div style="width:180px; height:180px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:3px solid #ff3b3b; box-shadow:0 0 30px rgba(255,59,89,0.5); transition:0.4s;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Hemanth Datta Jonna" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h3 style="font-size:24px; margin-bottom:8px;">Hemanth Datta Jonna</h3>
+                <p style="opacity:0.8; font-size:16px;">Board Member, Social Media Manager</p>
+            </a>
+        </div>
+
+        <div style="width:280px; text-align:center;">
+            <a href="https://www.instagram.com/_mr_bro_009?igsh=dnRsZnplZGFiaDVw==" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+                <div style="width:180px; height:180px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:3px solid #ff3b3b; box-shadow:0 0 30px rgba(255,59,89,0.5); transition:0.4s;">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Venkat Rohith" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h3 style="font-size:24px; margin-bottom:8px;">Venkat Rohith</h3>
+                <p style="opacity:0.8; font-size:16px;">Editor, Turbo Cut Manager</p>
+            </a>
+        </div>
+
+        <div style="width:280px; text-align:center;">
+            <a href="https://www.instagram.com/harsha_taddy_52?igsh=b2hrejVpYWtsN3hx" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+                <div style="width:180px; height:180px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:3px solid #ff3b3b; box-shadow:0 0 30px rgba(255,59,89,0.5); transition:0.4s;">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400" alt="Ballapuram SriHarsha" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h3 style="font-size:24px; margin-bottom:8px;">Ballapuram SriHarsha</h3>
+                <p style="opacity:0.8; font-size:16px;">Head of Creators, Turbo Cut</p>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<div class="footer">
+    ©️ 2026 Vishvarupa Creations • All Rights Reserved
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
